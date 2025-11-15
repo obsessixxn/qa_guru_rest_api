@@ -1,0 +1,17 @@
+register_success = {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "token": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": False,
+    "required": [
+        "id",
+        "token"
+    ]
+}
