@@ -17,7 +17,7 @@ def url(hand, api) -> str:
 
 ## на каждый из методов GET/POST/PUT/DELETE ручек reqres.in and На разные схемы (4-5 схем)
 def test_get_users():
-    response = requests.get("https://reqres.in/api/users?pagе=4")
+    response = requests.get("https://reqres.in/api/users?pagе=3", headers=headers)
 
     assert response.status_code == 200
 
@@ -102,7 +102,7 @@ def test_status_code_400():
 
 
 def test_status_code_404():
-    response = requests.get("https://reqres.in/api/unknown/23")
+    response = requests.get("https://reqres.in/api/unknown/23", headers=headers)
 
     assert response.status_code == 404
 
